@@ -19,6 +19,42 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.sidebar-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left: 12px;
+}
+.sidebar-header:hover{
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.sidebar-logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+#toggle-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    height: 50px;
+    text-align: center;
+}
+
+
 #sidebar{
     border-radius: 8px;
     margin: 10px;
@@ -106,6 +142,52 @@ body {
 .sidebar-link:not(.active):hover{
     background-color: rgb(255, 255, 255, 0.2);
     color: #fff;
+}
+
+#profile{
+    padding: 5px;
+    background-color: #1b301c;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#profile-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#profile-name{
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-left: 8px;
+    background-color: #1b301c;
+    border-radius: 10px;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+#path a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5)
 }
 .wrapper{
     display: flex;

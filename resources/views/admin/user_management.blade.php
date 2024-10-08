@@ -12,10 +12,14 @@
                 {{ Session::get('success') }}
             </div>
         @endif
-        <h1 class="font-bold text-2xl ml-3">Manage User Database</h1>
-        <button data-bs-toggle="modal" data-bs-target="#modalCreate" class="btn btn-success mt-4" type="button">
-            + Add User
-        </button>
+        <h2 class="font-bold">Halaman Manajemen User</h2>
+        <span id="path"><a href="#">admin</a> / <a href="{{ route('admin.user_management') }}">user_management</a></span>
+        <div id="today-section" style="display: flex; flex-direction: row; margin-top: 40px">
+            <span style="background-color: #1b301c; color: white; padding: 10px; border-radius: 8px; margin-right: 10px">List user</span>
+            <button data-bs-toggle="modal" data-bs-target="#modalCreate" class="btn btn-success" type="button">
+                + Tambah User
+            </button>
+        </div>
         <div class="table-responsive mt-2">
             <table class="table">
                 <thead>

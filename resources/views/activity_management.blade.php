@@ -12,10 +12,15 @@
                 {{ Session::get('success') }}
             </div>
         @endif
-        <h1 class="font-bold text-2xl ml-3">Manage Your Activity</h1>
-        <button data-bs-toggle="modal" data-bs-target="#modalCreate" class="btn btn-success mt-4" type="button">
-            + Add Activity
-        </button>
+        <h2 class="font-bold">Halaman Aktivitas</h2>
+        <span id="path"><a href="#">admin</a> / <a href="{{ route('admin.activity_management') }}">activity_management</a></span>
+        <div id="today-section" style="display: flex; flex-direction: row; margin-top: 40px">
+            <span style="background-color: #1b301c; color: white; padding: 10px; border-radius: 8px; margin-right: 10px">Aktivitas hari
+                ini</span>
+            <button data-bs-toggle="modal" data-bs-target="#modalCreate" class="btn btn-success" type="button">
+                + Tambah Aktivitas
+            </button>
+        </div>
         <div class="table-responsive mt-2">
             <table class="table">
                 <thead>
@@ -70,6 +75,10 @@
                     @endif
                 </tbody>
             </table>
+        </div>
+        <div id="history-section" style="margin-top: 30px">
+            <span style="background-color: #1b301c; color: white; padding: 10px; border-radius: 8px">Riwayat
+                aktivitas</span>
         </div>
         <div class="table-responsive mt-2">
             <table class="table">

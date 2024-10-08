@@ -20,12 +20,12 @@
 <body>
     <div class="wrapper">
         <aside id="sidebar">
-            <div class="d-flex align-items-center justify-content-start">
+            <div class="sidebar-header">
                 <button id="toggle-btn" type="button">
                     <i class="bi bi-grid-fill"></i>
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">Admin</a>
+                    <a href="#">Welcome!</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
@@ -44,6 +44,12 @@
                     </ul>
                 </li> --}}
                 <li class="sidebar-item">
+                    <a id="dashboard" href="/" class='sidebar-link'>
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a id="userManagement" href="{{ route('admin.user_management') }}" class='sidebar-link'>
                         <i class="bi bi-people-fill"></i>
                         <span>User Management</span>
@@ -58,17 +64,27 @@
             </ul>
             <div class="sidebar-footer">
                 <a id="logout" href="{{ route('logout') }}" class="sidebar-link">
+                    <i class="bi bi-box-arrow-left"></i>
                     <span>Logout</span>
                 </a>
             </div>
         </aside>
         <div class="main">
             <header>
-                <nav style="margin-top: 10px;" class="navbar navbar-expand-lg d-flex align-items-end justify-content-end">
-                    {{-- <form class="d-flex ms-4" role="search">
+                <nav class="navbar navbar-expand-lg d-flex align-items-end justify-content-end">
+                    <div id="profile" class="d-flex align-items-center justify-content-start">
+                        <img id="profile-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&h=100&q=80"
+                        alt="Profile">
+                    </div>
+                    <div id="profile-name" class="d-flex align-items-center justify-content-start">
+                        <span>{{ Auth::user()->name }}</span>
+                    </div>
+                </nav>
+                {{-- <nav style="margin-top: 10px;" class="navbar navbar-expand-lg d-flex align-items-end justify-content-end">
+                    <form class="d-flex ms-4" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> --}}
+                    </form>
                     <button data-dropdown
                         style="display: flex; align-items: center; justify-content: center; border: none; background-color: transparent; cursor: pointer;"
                         type="button" x-data="{ open: false }" @click="open = true" :class="{ 'active': open }">
@@ -84,7 +100,7 @@
                             </div>
                         </div>
                     </button>
-                </nav>
+                </nav> --}}
             </header>
             <main class="content px-3 py-4">
                 <div class="container-fluid">
